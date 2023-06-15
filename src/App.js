@@ -72,13 +72,13 @@ function App() {
     setBoards(tempBoards);
   };
 
-  const navigate = useNavigate(); ///1
+  const navigate = useNavigate(); /// usinging usenavigate
 
   const dragEnded = (bid, cid) => {
-    // Change the URL using the history object
+    // Change url
     let name1 = boards.find((item) => item.id === bid).title;
     let cardname = boards.find((item) => item.id === bid).cards.find((item) => item.id === cid).title;
-    navigate(`/${name1}/${cardname}`);  //3
+    navigate(`/${name1}/${cardname}`);  // templet
 
 
     let s_boardIndex, s_cardIndex, t_boardIndex, t_cardIndex;
